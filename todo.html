@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--Meta-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--link-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/7700614a00.js" crossorigin="anonymous"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+   <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="todo.css">
+  <link rel="stylesheet" href="todolist_resources/jquery-ui.css"/>
+ <link rel="stylesheet" href="todolist_resources/style.css"/>
+
+	<title>FAMILY HAPPY TIME</title>
+
+</head>
+<body>
+  <header>
+    
+ 
+<div class="fixed-top">
+  <header class="topbar">
+      <div class="container">
+        <div class="row">
+          <!-- social icon-->
+          <div class="col-sm-12">
+            <ul class="social-network">
+             <li><a class="waves-effect waves-dark" href="https://www.facebook.com/alif.mustaqim.1466" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="waves-effect waves-dark" href="https://www.instagram.com/alif.mustaqim_03/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+              <li><a class="waves-effect waves-dark" href="https://api.whatsapp.com/send?phone=+60176479094" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+              <li><a class="waves-effect waves-dark" href="mailto:alepmustaqim03@gmail.com" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+  </header>
+  <nav class="navbar navbar-expand-lg navbar-dark mx-background-top-linear">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" style="text-transform: uppercase;"> FAMILY HAPPY TIME</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+             <a class="nav-link" href="target.html">Target</a>
+          </li>
+
+         <li class="nav-item">
+            <a class="nav-link" href="todo.html">Todo List</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="calendar.html">Calendar</a>
+          </li>
+                               <li class="nav-item">
+            <a class="nav-link" href="booking.html">Book Here</a>
+          </li>
+          <li class="nav-item">
+           <a class="nav-link" href="about.html">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="help.html">Help</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+ </header>
+
+
+<div class="artical" style="background:url(bgpig.jpg);background-repeat: no-repeat;background-size: 100% 100% ; background-attachment: fixed;">
+  <center>
+  <h2>TO DO LIST</h2>
+</center>
+<div class="content">
+ <section id="todolists" class="page-section p-5 pt-0">
+        <div class="container2">
+          <div style="overflow: hidden;" class="mx-auto">
+            <div id="s002123" class="rounded mx-auto text-center p-3 mb-3">
+               <h3>Add task</h3>
+              <form id="todo-form">
+                <input type="text" placeholder="Title" />
+                <input type="text" id="textarea" placeholder="Description"/>
+                <input type="text" id="datepicker" placeholder="Start Date (dd/mm/yy)" />
+                <br/>
+                <input type="button" class="btn btn-primary mt-3" value="Add task" onclick="todo.add();" />
+              </form> 
+            </div>
+            
+            
+  
+            <div class="d-flex">
+              <div class="col-xl-3 task-list ml-auto border border-white" id="pending">
+               <h3>Pending</h3>
+              </div>
+              <div class="col-xl-3 task-list mx-auto border border-white" id="inProgress">
+                <h3>In Progress</h3>
+              </div>
+              <div class="col-xl-3 task-list mr-auto border border-white" id="completed">
+                <h3>Completed</h3>
+             </div>
+            </div>
+  
+            <div class="m-3" id="delete-div">Drag Here to Delete</div>
+  
+            <div class="text-center mt-3 w-75 mx-auto text-light">
+              <textarea id="myInput" class="p-1 w-50 bg-faded border border-none h-auto"></textarea>
+              <br/>
+              <div class="tooltips">
+                <button class="btn btn-light" onclick="myClipboard()" onmouseout="outFunc()">
+                  <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                  Copy
+                </button>
+                <input type="button" name="reset" onclick="reset();" value="Clear" class="btn btn-light">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section id="todolists2" class="page-section bg-faded rounded m-5 pt-5 pb-5">
+        <div class="container" style="color: white;">
+          <p>Unfortunately, To-do List aren't working with mobile devices yet. As for now, it only work with desktop.</p>
+        </div>
+      </section>
+</div>
+</div>
+ <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">This website are here to help you manage your times with your family. Our objective is to make your moment with family to be better then it could be. Try out our To-Do List. We use your browser storage to ensure a speedy browsing through our site, which mean all the changes you made are saved in your brower/devices, not our server. You can browse through Calendar to decide the date of your planning.</p>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by Family Happy Times
+            </p>
+          </div>
+        </div>
+      </div>
+</footer>
+</script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="todolist_resources/jquery.min.js"></script> 
+ <script src="todolist_resources/jquery-ui.min.js"></script>
+   <script src="todolist_resources/todo.js"></script> 
+   <script type="text/javascript">
+      $("#datepicker").datepicker();
+      $("#datepicker").datepicker("option", "dateFormat", "dd/mm/yy");
+          todo.init();
+   </script>
+   <script type="text/javascript">
+     function myClipboard(){
+       var getData = JSON.parse(localStorage.getItem("todoData"));
+       var myArray = Object.values(getData);
+      
+       var inPending = [];
+       var inProgress = [];
+       var inCompleted = [];
+
+       for (var x=0;x<myArray.length;x++){
+         if (myArray[x].code == 1){
+           inPending.push(myArray[x].id);
+         }else if(myArray[x].code == 2){
+           inProgress.push(myArray[x].id);
+         }else if(myArray[x].code == 3){
+           inCompleted.push(myArray[x].id);
+         }
+       }
+       
+       var s1 = "Planned \n", s2 = "Pending \n", s3 = "Completed \n";
+       for(var i=0;i<inPending.length;i++){
+         var q = 1+i;
+         s1 += "- Plan "+q+" is "+getData[inPending[i]].title+", described "+getData[inPending[i]].description+" at "+getData[inPending[i]].date+"\n";
+       }
+
+       var s4 = s1;
+       console.log(s4);
+       document.getElementById("myInput").value = s4;
+     
+       var copyText = document.getElementById("myInput");
+
+       /* Select the text field */
+       copyText.select();
+       copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+       /* Copy the text inside the text field */
+       document.execCommand("copy");
+
+       var tooltip = document.getElementById("myTooltip");
+       tooltip.innerHTML = "Text copied";
+     }
+   </script>
+   <script type="text/javascript">
+     function outFunc() {
+       var tooltip = document.getElementById("myTooltip");
+       tooltip.innerHTML = "Copy to clipboard";
+     }
+   </script>
+ </body>
+
+ <!-- Script to highlight the active date in the hours list -->
+ <script>
+   $('.list-hours li').eq(new Date().getDay()).addClass('today');
+   function reset() {
+    var ta = document.getElementById('myInput');
+    if (!ta.value || ta.value != ta.defaultValue && confirm('Are you sure?')) {
+        ta.value = ta.defaultValue;
+    }
+}
+ </script>
+</body>
+</html>
